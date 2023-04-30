@@ -1,5 +1,21 @@
 # application.yml
 spring:
+  datasource:
+    url: jdbc:postgresql://postgres-sql:5432/challenge?createDatabaseIfNotExist=true
+    username: username
+    password: password
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      schema: public
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: false
+    open-in-view: false
   rabbitmq:
     host: localhost
     port: 5672

@@ -1,0 +1,12 @@
+# application.yml
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    config:
+      uri: http://localhost:8888
+      name: order-taking-api
+      profile: dev
